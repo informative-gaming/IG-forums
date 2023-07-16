@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Forum_Threads extends Model
 {
-    use HasFactory;
+    protected $table = 'forum_threads';
+    // use HasFactory;
 }
