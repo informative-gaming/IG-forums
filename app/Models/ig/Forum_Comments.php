@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Forum_Comments extends Model
 {
-    use HasFactory;
+    protected $table = 'forum_comments';
+    // use HasFactory;
 }

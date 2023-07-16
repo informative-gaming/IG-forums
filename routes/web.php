@@ -23,6 +23,10 @@ Route::get('forum_comments', [App\Http\Controllers\Forum_CommentsController::cla
 
 Route::get('forum_threads', [App\Http\Controllers\Forum_ThreadsController::class, 'index']);
 
+Route::get('signup', [App\Http\Controllers\UsersController::class, 'signup']);
+
+Route::post('/users/store', [App\Http\Controllers\UsersController::class, 'store']);
+
 Route::get('game', [App\Http\Controllers\GameController::class, 'index']);
 
 Route::get('game_tutorials', [App\Http\Controllers\Game_TutorialsController::class, 'index']);
@@ -30,3 +34,9 @@ Route::get('game_tutorials', [App\Http\Controllers\Game_TutorialsController::cla
 Route::get('users', [App\Http\Controllers\UsersController::class, 'index']);
 
 Route::get('users_preferences', [App\Http\Controllers\Users_PreferencesController::class, 'index']);
+
+Route::get('login', [UsersController::class, 'index'])->name('login');
+
+Route::post('post-login', [UsersController::class, 'postLogin'])->name('login.post'); 
+
+Route::get('dashboard', [UsersController::class, 'dashboard']); 
